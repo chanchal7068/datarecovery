@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useState, MouseEvent } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Cpu, HardDrive, Server, ShieldCheck, FileSearch, Laptop, Archive, ShieldAlert, CheckCircle2, ArrowRight } from 'lucide-react';
@@ -81,9 +81,27 @@ const services = [
 ];
 
 export default function ServicesGrid() {
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+
+  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+  };
+
   return (
-    <div className="py-24 bg-[#0a0a1f] text-white relative z-10">
-      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16">
+    <div
+      className="py-24 bg-[#0a0a1f] text-white relative z-10 group overflow-hidden"
+      onMouseMove={handleMouseMove}
+    >
+      {/* Interactive Mouse Glow */}
+      <div
+        className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
+        style={{
+          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+        }}
+      />
+
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
 
         {/* Header */}
         <div className="text-center mb-20">
