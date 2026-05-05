@@ -158,10 +158,10 @@ export default function Header() {
           <nav className="hidden md:flex items-center gap-7 flex-1">
             <NavLink label="Home" />
             <MegaMenuDropdown label="Who We Are" data={whoWeAreData} columns={3} imageLeft />
-            <MegaMenuDropdown label="Services" data={servicesData} columns={3} />
+            <MegaMenuDropdown label="Services" data={servicesData} columns={3} imageLeft />
             <NavLink label="Price and Cost" />
-            <MegaMenuDropdown label="Data Recovery" data={dataRecoveryMethodsData} columns={3} />
-            <MegaMenuDropdown label="DSS" data={dssData} columns={4} />
+            <MegaMenuDropdown label="Data Recovery" data={dataRecoveryMethodsData} columns={3} imageLeft />
+            <MegaMenuDropdown label="DSS" data={dssData} columns={4} imageLeft />
             <NavLink label="Claims" />
             <NavLink label="Contacts" />
           </nav>
