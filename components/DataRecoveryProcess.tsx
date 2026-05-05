@@ -16,7 +16,7 @@ const steps = [
 
 export default function DataRecoveryProcess() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLDivElement>(null);
   const nextSectionRef = useRef<HTMLDivElement>(null);
   const isAutoScrollingRef = useRef(false);
   const [scrollProgress, setScrollProgress] = useState(0);
