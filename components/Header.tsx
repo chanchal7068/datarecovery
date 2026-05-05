@@ -44,10 +44,12 @@ function MegaMenuDropdown({
   label,
   data,
   columns = 3,
+  imageLeft = false,
 }: {
   label: string;
   data: { title: string; desc: string; img: string }[];
   columns?: number;
+  imageLeft?: boolean;
 }) {
   const [open, setOpen] = useState(false);
   const timer = useRef<any>(null);
@@ -92,9 +94,9 @@ function MegaMenuDropdown({
               <Link
                 href="#"
                 key={i}
-                className="group border border-gray-200 rounded-xl overflow-hidden hover:border-blue-400 hover:shadow-md transition-all"
+                className={`group border border-gray-200 rounded-xl overflow-hidden hover:border-blue-400 hover:shadow-md transition-all ${imageLeft ? 'flex flex-row' : ''}`}
               >
-                <div className="w-full h-32 overflow-hidden bg-gray-100 relative">
+                <div className={`${imageLeft ? 'w-28 shrink-0' : 'w-full h-32'} overflow-hidden bg-gray-100 relative`}>
                   <Image
                     src={item.img}
                     alt={item.title}
@@ -102,7 +104,7 @@ function MegaMenuDropdown({
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="px-4 py-3 bg-white">
+                <div className={`px-4 py-3 bg-white ${imageLeft ? 'flex flex-col justify-center' : ''}`}>
                   <p className="text-[11px] font-bold uppercase tracking-wide text-gray-800 group-hover:text-[#004b9b] transition-colors leading-snug">
                     {item.title}
                   </p>
@@ -155,7 +157,7 @@ export default function Header() {
           {/* Navigation */}
           <nav className="hidden md:flex items-center gap-7 flex-1">
             <NavLink label="Home" />
-            <MegaMenuDropdown label="Who We Are" data={whoWeAreData} columns={3} />
+            <MegaMenuDropdown label="Who We Are" data={whoWeAreData} columns={3} imageLeft />
             <MegaMenuDropdown label="Services" data={servicesData} columns={3} />
             <NavLink label="Price and Cost" />
             <MegaMenuDropdown label="Data Recovery" data={dataRecoveryMethodsData} columns={3} />
