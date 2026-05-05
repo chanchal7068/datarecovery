@@ -72,12 +72,15 @@ body {
   animation-play-state: paused;
 }
 
-/* 1920px wide screen container fix */
+/* 1920px wide screen fix */
 @media (min-width: 1920px) {
   .max-w-\[1366px\] {
     max-width: 1760px !important;
   }
   .max-w-7xl {
     max-width: 1760px !important;
+  }
+  .min-h-screen {
+    min-height: auto !important;
   }
 }

@@ -31,7 +31,7 @@ export default function Hero() {
   };
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#59008c] min-h-screen">
+    <section className="relative w-full overflow-hidden bg-[#59008c] min-h-screen xl:min-h-0">
       {/* Background Gradient & Dot Pattern */}
       <div
         className="absolute inset-0 z-0"
