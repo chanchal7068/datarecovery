@@ -7,7 +7,7 @@ export default function StatsSection() {
       {/* Background glow */}
       <div className="absolute bottom-0 right-0 w-[600px] h-[600px] bg-purple-600/5 rounded-full blur-[140px] pointer-events-none" />
       
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
         
         {/* Top Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">

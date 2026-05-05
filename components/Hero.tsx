@@ -46,7 +46,7 @@ export default function Hero() {
 
 
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-32 flex flex-col lg:flex-row items-center">
+      <div className="max-w-7xl 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 pt-24 pb-32 flex flex-col lg:flex-row items-center">
 
         {/* Left Column Content */}
         <div className="w-full lg:w-1/2 pr-0 lg:pr-12 text-white">

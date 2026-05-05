@@ -40,7 +40,7 @@ const services = [
 export default function SEOServices() {
   return (
     <section className="w-full bg-white py-20 border-t border-gray-100">
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-black text-[#1d1d1f] mb-4 tracking-tight">
             We Provide Following <span className="text-[#004B9B]">DATA Recovery Services</span>

@@ -110,7 +110,7 @@ export default function DataRecoveryProcess() {
           <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-700 opacity-10 rounded-full blur-3xl pointer-events-none z-0" />
           <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-700 opacity-10 rounded-full blur-3xl pointer-events-none z-0" />
 
-          <div className="w-full max-w-[1366px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+          <div className="w-full max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
 
             {/* Header */}
             <div className="text-center mb-16 xl:mb-20">

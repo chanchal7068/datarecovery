@@ -3,7 +3,7 @@ import React from 'react';
 export default function CompanyOverview() {
   return (
     <section className="w-full bg-[#fbfbfd] py-32 relative overflow-hidden">
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6 relative z-10">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 relative z-10">
         
         {/* Header Section */}
         <div className="text-center mb-20">

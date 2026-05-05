@@ -19,7 +19,7 @@ export default function LogoMarquee() {
 
   return (
     <div className="py-12 bg-white border-b border-gray-100 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 mb-8">
+      <div className="max-w-7xl 3xl:max-w-[1760px] mx-auto px-4 mb-8">
         <h2 className="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest">
           Trusted by 100+ Companies Globally
         </h2>

@@ -135,7 +135,7 @@ function NavLink({ label }: { label: string }) {
 export default function Header() {
   return (
     <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6">
         <div className="flex items-center h-[70px] gap-10">
 
           {/* Logo */}

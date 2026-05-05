@@ -83,7 +83,7 @@ const services = [
 export default function ServicesGrid() {
   return (
     <div className="py-24 bg-[#0a0a1f] text-white relative z-10">
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6 lg:px-16">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16">
 
         {/* Header */}
         <div className="text-center mb-20">

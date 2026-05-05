@@ -27,7 +27,7 @@ export default function AboutSection() {
       <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-blue-100 opacity-40 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-blue-100 opacity-30 blur-3xl pointer-events-none" />
 
-      <div className="max-w-[1366px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
+      <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
         {/* Top label */}
         <div className="flex items-center justify-center gap-2 mb-4">
           <span className="h-px w-10 bg-[#ff1a1a]" />
