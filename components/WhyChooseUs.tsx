@@ -36,20 +36,90 @@ const reasons = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="w-full bg-white py-24 relative overflow-hidden">
+    <section className="w-full bg-white pt-24 pb-36 relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-blue-100/60 rounded-full blur-[120px] pointer-events-none" />
+      <div className="pointer-events-none absolute right-8 top-10 z-0 hidden w-[180px] opacity-[0.08] mix-blend-multiply md:block 2xl:right-20 2xl:top-14 2xl:w-[250px]">
+        <svg viewBox="0 0 180 240" fill="none" aria-hidden="true">
+          <rect x="3" y="3" width="174" height="234" rx="8" fill="#8f8caf" stroke="#4d4a70" strokeWidth="5" />
+          <circle cx="20" cy="20" r="7" fill="#4f4b72" />
+          <circle cx="160" cy="20" r="7" fill="#4f4b72" />
+          <circle cx="20" cy="220" r="7" fill="#4f4b72" />
+          <circle cx="160" cy="220" r="7" fill="#4f4b72" />
+          <circle cx="90" cy="94" r="70" fill="#f8f7ff" stroke="#4a4968" strokeWidth="8" />
+          <path d="M22 86C42 92 59 99 78 107C65 74 55 45 50 24C34 36 24 57 22 86Z" fill="#e6e3ff" />
+          <path d="M101 26C141 35 165 73 157 114C150 145 126 167 97 173C108 139 111 89 101 26Z" fill="#e6e3ff" />
+          <circle cx="90" cy="94" r="35" fill="#b8b3dc" />
+          <circle cx="90" cy="94" r="16" fill="#5e5a83" />
+          {[0, 60, 120, 180, 240, 300].map((angle) => (
+            <circle
+              key={angle}
+              cx={90 + Math.cos((angle * Math.PI) / 180) * 20}
+              cy={94 + Math.sin((angle * Math.PI) / 180) * 20}
+              r="5"
+              fill="#625d86"
+            />
+          ))}
+          <path d="M125 129L80 182" stroke="#625d86" strokeWidth="15" strokeLinecap="round" />
+          <path d="M128 127L95 151" stroke="#f8f7ff" strokeWidth="9" strokeLinecap="round" />
+          <path d="M38 154L68 184L52 210H28L15 191L23 167L38 154Z" fill="#f0efff" stroke="#4a4968" strokeWidth="8" />
+          <circle cx="66" cy="184" r="12" fill="#8f8caf" stroke="#4a4968" strokeWidth="7" />
+          <path d="M115 192L144 173H170V216L151 233H115V192Z" fill="#f79216" stroke="#4a4968" strokeWidth="7" />
+        </svg>
+      </div>
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-0 hidden h-[260px] overflow-hidden md:block">
+        <svg
+          className="absolute left-1/2 bottom-[-42px] h-[280px] w-[1180px] -translate-x-1/2"
+          viewBox="0 0 1180 280"
+          fill="none"
+          aria-hidden="true"
+        >
+          <defs>
+            <linearGradient id="expert-bottom-line" x1="590" y1="62" x2="590" y2="280" gradientUnits="userSpaceOnUse">
+              <stop stopColor="#64748b" stopOpacity="0.34" />
+              <stop offset="1" stopColor="#64748b" stopOpacity="0" />
+            </linearGradient>
+            <radialGradient id="expert-bottom-glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(590 70) rotate(90) scale(170 420)">
+              <stop stopColor="#dbeafe" stopOpacity="0.9" />
+              <stop offset="0.46" stopColor="#eef6ff" stopOpacity="0.52" />
+              <stop offset="1" stopColor="#ffffff" stopOpacity="0" />
+            </radialGradient>
+          </defs>
+
+          <ellipse cx="590" cy="118" rx="420" ry="135" fill="url(#expert-bottom-glow)" />
+
+          {[-380, -320, -260, -200, -145, -92, -42, 42, 92, 145, 200, 260, 320, 380].map((endX) => (
+            <path
+              key={endX}
+              d={`M 590 70 C ${590 + endX * 0.18} ${endX < 0 ? 112 : 28}, ${590 + endX * 0.62} 118, ${590 + endX} 280`}
+              stroke="url(#expert-bottom-line)"
+              strokeWidth="1"
+            />
+          ))}
+
+          {[-110, -74, -38, 38, 74, 110].map((loopX) => (
+            <path
+              key={loopX}
+              d={`M 590 70 C ${590 + loopX} -18, ${590 + loopX * 1.28} 92, 590 70`}
+              stroke="url(#expert-bottom-line)"
+              strokeWidth="0.9"
+            />
+          ))}
+
+          <path d="M 590 70 C 570 16, 570 16, 590 70 C 610 16, 610 16, 590 70" stroke="url(#expert-bottom-line)" strokeWidth="0.9" />
+        </svg>
+      </div>
       
       <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
         
         {/* Header */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-px w-10 bg-[#004b9b]/30" />
-            <span className="text-[#004b9b] text-xs font-extrabold tracking-[0.25em] uppercase">
+            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            <span className="text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase">
               {'// EXPERT SOLUTIONS'}
             </span>
-            <span className="h-px w-10 bg-[#004b9b]/30" />
+            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0f172a] mb-6 leading-tight tracking-tight">
             Why Trust DSS for Your <br className="hidden md:block" /> Data Recovery Needs?
@@ -57,7 +127,8 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="relative">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
@@ -85,6 +156,7 @@ export default function WhyChooseUs() {
               </div>
             );
           })}
+          </div>
         </div>
 
       </div>

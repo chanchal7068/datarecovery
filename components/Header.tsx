@@ -53,9 +53,12 @@ function MegaMenuDropdown({
   imageLeft?: boolean;
 }) {
   const [open, setOpen] = useState(false);
-  const timer = useRef<any>(null);
+  const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const handleEnter = () => { clearTimeout(timer.current); setOpen(true); };
+  const handleEnter = () => {
+    if (timer.current) clearTimeout(timer.current);
+    setOpen(true);
+  };
   const handleLeave = () => { timer.current = setTimeout(() => setOpen(false), 120); };
 
   return (
@@ -65,7 +68,7 @@ function MegaMenuDropdown({
       onMouseLeave={handleLeave}
     >
       <button
-        className={`flex items-center gap-1 2xl:gap-1.5 text-sm 2xl:text-[15px] font-semibold transition-all pb-1 border-b-2 border-transparent hover:border-[#004b9b] hover:text-[#004b9b] ${open ? 'border-[#004b9b] text-[#004b9b]' : 'text-gray-700'
+        className={`flex items-center gap-1 2xl:gap-1.5 text-sm 2xl:text-[15px] font-semibold transition-all rounded-full px-3 py-2 2xl:px-4 2xl:py-2.5 border border-transparent hover:bg-[#e6f4ff] hover:text-[#004b9b] ${open ? 'bg-[#e6f4ff] text-[#004b9b] shadow-[inset_0_1px_0_rgba(255,255,255,0.9)]' : 'text-[#0f172a]'
           }`}
       >
         {label}
@@ -102,6 +105,7 @@ function MegaMenuDropdown({
                     src={item.img}
                     alt={item.title}
                     fill
+                    sizes={imageLeft ? '112px' : '(min-width: 768px) 33vw, 100vw'}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
@@ -127,7 +131,7 @@ function NavLink({ label }: { label: string }) {
   return (
     <Link
       href="#"
-      className="text-sm 2xl:text-[15px] font-semibold text-gray-700 pb-1 border-b-2 border-transparent hover:border-[#004b9b] hover:text-[#004b9b] transition-all"
+      className="text-sm 2xl:text-[15px] font-semibold text-[#0f172a] rounded-full px-3 py-2 2xl:px-4 2xl:py-2.5 border border-transparent hover:bg-[#e6f4ff] hover:text-[#004b9b] transition-all"
     >
       {label}
     </Link>
@@ -137,9 +141,10 @@ function NavLink({ label }: { label: string }) {
 // ── Header ─────────────────────────────────────────────────────
 export default function Header() {
   return (
-    <header className="w-full bg-white border-b border-gray-200 sticky top-0 z-50">
+    <header className="w-full bg-white/80 sticky top-0 z-50">
+      <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(243,250,255,0.78))] backdrop-blur-xl border-b border-[#004b9b]/10" />
       <div className="max-w-[1366px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 2xl:px-10">
-        <div className="flex items-center justify-between h-[70px] 2xl:h-[88px] gap-8 2xl:gap-16">
+        <div className="relative flex items-center justify-between h-[70px] 2xl:h-[88px] gap-8 2xl:gap-16">
 
           {/* Logo */}
           <div className="flex-shrink-0">
@@ -156,7 +161,7 @@ export default function Header() {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center justify-end gap-7 2xl:gap-12">
+          <nav className="hidden md:flex items-center justify-end gap-2 2xl:gap-3 rounded-full border border-slate-200 bg-white/78 px-3 py-2 backdrop-blur-md">
             <NavLink label="Home" />
             <MegaMenuDropdown label="Who We Are" data={whoWeAreData} columns={3} imageLeft />
             <MegaMenuDropdown label="Services" data={servicesData} columns={3} imageLeft />
@@ -167,7 +172,7 @@ export default function Header() {
             <NavLink label="Contacts" />
             <a
               href="tel:+919880872536"
-              className="inline-flex items-center justify-center gap-2 bg-[#ff1a1a] px-5 2xl:px-7 py-3 2xl:py-3.5 text-xs 2xl:text-[15px] font-extrabold text-white shadow-[0_8px_18px_rgba(255,26,26,0.25)] transition-colors hover:bg-[#d91414] whitespace-nowrap"
+              className="inline-flex items-center justify-center gap-2 rounded-full border border-[#e11f27] bg-[#e11f27] px-5 2xl:px-7 py-3 2xl:py-3.5 text-xs 2xl:text-[15px] font-extrabold text-white transition-colors hover:bg-[#c91b22] whitespace-nowrap"
             >
               <Phone size={16} strokeWidth={2.5} />
               +91 988087 2536

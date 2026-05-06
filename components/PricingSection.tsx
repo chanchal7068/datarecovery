@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, MouseEvent } from 'react';
+import React, { CSSProperties, MouseEvent, useRef } from 'react';
 import { CheckCircle2 } from 'lucide-react';
 
 const plans = [
@@ -87,11 +87,12 @@ const plans = [
 ];
 
 export default function PricingSection() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const glowRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    glowRef.current?.style.setProperty('--glow-x', `${e.clientX - rect.left}px`);
+    glowRef.current?.style.setProperty('--glow-y', `${e.clientY - rect.top}px`);
   };
 
   return (
@@ -101,10 +102,11 @@ export default function PricingSection() {
     >
       {/* Interactive Mouse Glow */}
       <div 
+        ref={glowRef}
         className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(59, 154, 225, 0.15), transparent 80%)`
-        }}
+          background: 'radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(59, 154, 225, 0.15), transparent 80%)'
+        } as CSSProperties}
       />
       
       {/* Decorative Background Glows */}
@@ -115,8 +117,10 @@ export default function PricingSection() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="text-[#3b9ae1] text-xs font-bold tracking-[0.25em] uppercase mb-4">
-            // AFFORDABLE
+          <p className="inline-flex items-center gap-3 text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase mb-4 2xl:mb-5">
+            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            {'// AFFORDABLE'}
+            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             Plan and Pricing

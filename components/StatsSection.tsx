@@ -50,7 +50,7 @@ export default function StatsSection() {
             </div>
             
             <p className="text-gray-300 text-lg md:text-[22px] leading-relaxed font-medium mb-10 italic">
-              "DSS has built a name as the most reliable company in the data recovery business. Our facilities and specialized technicians are certified to handle the most complex recovery scenarios with absolute safety and confidentiality."
+              &quot;DSS has built a name as the most reliable company in the data recovery business. Our facilities and specialized technicians are certified to handle the most complex recovery scenarios with absolute safety and confidentiality.&quot;
             </p>
             
             <a href="#" className="inline-flex items-center gap-3 bg-white/5 border border-white/10 text-white px-8 py-3 rounded-full font-bold text-sm uppercase tracking-wider group-hover:bg-[#4facfe] group-hover:text-white group-hover:border-[#4facfe] transition-all duration-300">

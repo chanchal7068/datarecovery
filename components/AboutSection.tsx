@@ -1,32 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
-
-const highlights = [
-  {
-    img: 'https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=400&q=80',
-    title: 'All Devices Covered',
-    desc: 'Hard disks, SSDs, USB drives, RAID systems & more.',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=400&q=80',
-    title: 'Safe & Confidential',
-    desc: 'Your data is handled with strict confidentiality.',
-  },
-  {
-    img: 'https://images.unsplash.com/photo-1508962914676-134849a727f0?w=400&q=80',
-    title: 'Flexible Timing',
-    desc: 'We work around your schedule to limit downtime.',
-  },
-];
+import { publicPath } from '@/lib/site';
 
 export default function AboutSection() {
   return (
-    <section className="py-20 2xl:py-28 bg-[#fafafa] w-full relative overflow-hidden">
-      {/* Decorative background blob */}
-      <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full bg-blue-100 opacity-40 blur-3xl pointer-events-none" />
-      <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full bg-blue-100 opacity-30 blur-3xl pointer-events-none" />
-
+    <section className="py-20 2xl:py-28 bg-white w-full relative overflow-hidden">
       <div className="max-w-[1366px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-20 relative z-10">
         {/* Top label */}
         <div className="flex items-center justify-center gap-2 2xl:gap-3 mb-4 2xl:mb-5">
@@ -40,14 +19,16 @@ export default function AboutSection() {
         {/* Main heading */}
         <h2 className="text-center text-[2rem] md:text-[2.6rem] 2xl:text-[3.4rem] font-bold text-[#1a1a2e] leading-tight mb-14 2xl:mb-20 max-w-3xl 2xl:max-w-5xl mx-auto">
           Get the Best{' '}
-          <span className="text-[#004b9b]">Data Recovery Services</span>{' '}
+          <span className="inline-block whitespace-nowrap rounded-xl border border-[#b8dcff] bg-[#e8f4ff] px-3 py-1 text-[0.82em] text-[#004b9b]">
+            Data Recovery Services
+          </span>{' '}
           in Bangalore
         </h2>
 
         {/* Two-column layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 2xl:gap-28 items-start">
+        <div className="space-y-12 2xl:space-y-16">
           {/* Left — paragraphs */}
-          <div className="space-y-5 2xl:space-y-6 text-[#4b5563] leading-[1.85] 2xl:leading-[1.9] text-[15.5px] 2xl:text-[18px] text-justify">
+          <div className="max-w-5xl 2xl:max-w-[1380px] mx-auto space-y-5 2xl:space-y-6 text-[#4b5563] leading-[1.85] 2xl:leading-[1.9] text-[15.5px] 2xl:text-[18px] text-justify">
             <p>
               Data Storage Solutions bring hope to businesses and individuals that lose their
               data either intentionally or because of some mishap, hardware malfunction, or
@@ -59,91 +40,97 @@ export default function AboutSection() {
               incurring important time and energy losses.
             </p>
             <p>
-              To us, it doesn't matter what caused your data loss—hardware failure, software
+              To us, it doesn&apos;t matter what caused your data loss—hardware failure, software
               issues, virus infection, or anything else. We can totally help get your important
-              information back. We customize our data recovery to fit each client's unique
+              information back. We customize our data recovery to fit each client&apos;s unique
               situation. We offer flexible timing to limit downtime and recover data faster.
             </p>
             <p>
-              We're proud that we can recover data even from really tricky situations. We've
-              got a proven track record of getting back people's information from all kinds of
+              We&apos;re proud that we can recover data even from really tricky situations. We&apos;ve
+              got a proven track record of getting back people&apos;s information from all kinds of
               devices—hard drives, SSDs, RAID systems, you name it.
             </p>
+          </div>
 
-            {/* CTA */}
-            <div className="pt-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 bg-[#004b9b] text-white px-7 2xl:px-9 py-3 2xl:py-4 font-semibold text-sm 2xl:text-base hover:bg-blue-800 transition-colors rounded-sm group"
-              >
-                Learn More About Us
-                <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
-              </a>
+          {/* Right — connected highlight panels */}
+          <div className="relative max-w-5xl 2xl:max-w-[1380px] mx-auto">
+            <div className="grid grid-cols-1 gap-5 2xl:gap-7 md:grid-cols-3">
+              <div className="group relative min-h-[270px] 2xl:min-h-[360px] overflow-hidden rounded-2xl border border-slate-200/80 bg-white/85 p-6 2xl:p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(129,140,248,0.3),transparent_46%),linear-gradient(180deg,rgba(248,250,252,0.88),rgba(255,255,255,0.98))]" />
+                <div className="relative mb-8 min-h-[140px] 2xl:min-h-[190px] overflow-hidden rounded-2xl bg-white/50">
+                  <Image
+                    src={publicPath('/images/all_device_cover_recovery.jpg')}
+                    alt="All devices covered"
+                    fill
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative">
+                  <h3 className="text-xl 2xl:text-2xl font-semibold leading-tight text-[#111827]">
+                    All Devices Covered
+                  </h3>
+                  <p className="mt-2 text-sm 2xl:text-base leading-relaxed text-[#64748b]">
+                    Hard disks, SSDs, USB drives, RAID systems and more.
+                  </p>
+                </div>
+              </div>
+
+              <div className="group relative min-h-[270px] 2xl:min-h-[360px] overflow-hidden rounded-2xl border border-slate-200/80 bg-white/85 p-6 2xl:p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(56,189,248,0.3),transparent_48%),linear-gradient(180deg,rgba(248,250,252,0.88),rgba(255,255,255,0.98))]" />
+                <div className="relative mb-8 min-h-[140px] 2xl:min-h-[190px] overflow-hidden rounded-2xl bg-white/50">
+                  <Image
+                    src={publicPath('/images/flexible_timing_recovery.jpg')}
+                    alt="Flexible timing"
+                    fill
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative">
+                  <h3 className="text-xl 2xl:text-2xl font-semibold leading-tight text-[#111827]">
+                    Flexible Timing
+                  </h3>
+                  <p className="mt-2 text-sm 2xl:text-base leading-relaxed text-[#64748b]">
+                    Recovery support scheduled around your downtime.
+                  </p>
+                </div>
+              </div>
+
+              <div className="group relative min-h-[270px] 2xl:min-h-[360px] overflow-hidden rounded-2xl border border-slate-200/80 bg-white/85 p-6 2xl:p-7 shadow-[0_16px_40px_rgba(15,23,42,0.08)] backdrop-blur-md transition-all duration-300 hover:-translate-y-1">
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_0%,rgba(124,58,237,0.26),transparent_48%),linear-gradient(180deg,rgba(248,250,252,0.88),rgba(255,255,255,0.98))]" />
+                <div className="relative mb-8 min-h-[140px] 2xl:min-h-[190px] overflow-hidden rounded-2xl bg-white/50">
+                  <Image
+                    src={publicPath('/images/safe_confidential_recovery.jpg')}
+                    alt="Safe and confidential"
+                    fill
+                    sizes="(min-width: 1024px) 30vw, 100vw"
+                    className="object-cover"
+                  />
+                </div>
+                <div className="relative">
+                  <h3 className="text-xl 2xl:text-2xl font-semibold leading-tight text-[#111827]">
+                    Safe & Confidential
+                  </h3>
+                  <p className="mt-2 text-sm 2xl:text-base leading-relaxed text-[#64748b]">
+                    Protected data and retrieval through secure handling.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
-          {/* Right — highlight cards (Asymmetric Grid) */}
-          <div className="grid grid-cols-2 gap-4 2xl:gap-6 h-full">
-
-            {/* Big Card - spans 2 columns */}
-            <div className="col-span-2 sm:col-span-2 rounded-[24px] p-8 2xl:p-10 relative overflow-hidden flex flex-col justify-between min-h-[240px] 2xl:min-h-[320px] transition-transform hover:-translate-y-1 group">
-              {/* Full Background Image */}
-              <Image
-                src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=800&q=80"
-                alt="Storage Devices"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/70"></div>
-              {/* Content */}
-              <div className="relative z-10">
-                <h3 className="text-2xl sm:text-3xl 2xl:text-4xl font-bold text-white leading-tight drop-shadow-lg tracking-tight">
-                  All Devices Covered
-                </h3>
-              </div>
-              <p className="text-gray-100 text-base sm:text-lg 2xl:text-xl relative z-10 max-w-[80%] mt-8 leading-relaxed font-medium drop-shadow-md">
-                Hard disks, SSDs, USB drives, RAID systems & more.
-              </p>
-            </div>
-
-            {/* Small Card 1 */}
-            <div className="col-span-2 sm:col-span-1 rounded-[24px] p-6 sm:p-8 2xl:p-10 relative overflow-hidden flex flex-col justify-between min-h-[240px] 2xl:min-h-[300px] transition-transform hover:-translate-y-1 group">
-              {/* Full Background Image */}
-              <Image
-                src="https://images.unsplash.com/photo-1563986768494-4dee2763ff3f?w=600&q=80"
-                alt="Security Lock"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/70"></div>
-              {/* Content */}
-              <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-bold text-white leading-tight relative z-10 drop-shadow-lg tracking-tight">
-                Safe & Confidential
-              </h3>
-              <p className="text-gray-100 text-sm sm:text-base 2xl:text-lg mt-6 leading-relaxed relative z-10 drop-shadow-md font-medium">
-                Your data is handled with strict confidentiality.
-              </p>
-            </div>
-
-            {/* Small Card 2 */}
-            <div className="col-span-2 sm:col-span-1 rounded-[24px] p-6 sm:p-8 2xl:p-10 relative overflow-hidden flex flex-col justify-between min-h-[240px] 2xl:min-h-[300px] transition-transform hover:-translate-y-1 group">
-              {/* Full Background Image */}
-              <Image
-                src="https://images.unsplash.com/photo-1508962914676-134849a727f0?w=600&q=80"
-                alt="Clock Timing"
-                fill
-                className="object-cover group-hover:scale-105 transition-transform duration-500"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/70"></div>
-              {/* Content */}
-              <h3 className="text-xl sm:text-2xl 2xl:text-3xl font-bold text-white leading-tight relative z-10 drop-shadow-lg tracking-tight">
-                Flexible Timing
-              </h3>
-              <p className="text-gray-100 text-sm sm:text-base 2xl:text-lg mt-6 leading-relaxed relative z-10 drop-shadow-md font-medium">
-                We work around your schedule to limit downtime.
-              </p>
-            </div>
-
+          {/* CTA */}
+          <div className="flex justify-center pt-2">
+            <a
+              href="#"
+              className="group inline-flex items-center gap-3 bg-[#004B9B] hover:bg-[#003d82] text-white px-8 py-4 rounded-full font-bold uppercase tracking-[0.15em] text-sm transition-all duration-300 shadow-[0_8px_24px_rgba(0,75,155,0.3)] hover:shadow-[0_12px_32px_rgba(0,75,155,0.45)] hover:-translate-y-0.5"
+            >
+              Learn More About Us
+              <span className="w-7 h-7 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors">
+                <ArrowRight size={14} />
+              </span>
+            </a>
           </div>
         </div>
       </div>

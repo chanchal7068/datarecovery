@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, MouseEvent } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Cpu, HardDrive, Server, ShieldCheck, FileSearch, Laptop, Archive, ShieldAlert, CheckCircle2, ArrowRight } from 'lucide-react';
@@ -81,36 +81,18 @@ const services = [
 ];
 
 export default function ServicesGrid() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
-  };
-
   return (
-    <div
-      className="py-24 bg-[#0a0a1f] text-white relative z-10 group overflow-hidden"
-      onMouseMove={handleMouseMove}
-    >
-      {/* Interactive Mouse Glow */}
-      <div
-        className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
-        }}
-      />
-
+    <div className="pt-24 pb-24 text-white relative z-10 overflow-hidden">
       <div className="max-w-[1366px] 3xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 relative z-10">
 
         {/* Header */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-px w-10 bg-[#4facfe]/50" />
+            <span className="h-px w-10 bg-[#4facfe]" />
             <span className="text-[#4facfe] text-xs font-bold tracking-[0.25em] uppercase">
-              WHAT WE DO
+              {'// WHAT WE DO'}
             </span>
-            <span className="h-px w-10 bg-[#4facfe]/50" />
+            <span className="h-px w-10 bg-[#4facfe]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-bold mb-6 leading-tight">
             Comprehensive <span className="text-[#4facfe]">Data Recovery</span> Solutions
@@ -134,6 +116,7 @@ export default function ServicesGrid() {
                   src={service.img}
                   alt={service.title}
                   fill
+                  sizes="(min-width: 1536px) 25vw, (min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
                   className="object-cover group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-t from-black/30 to-transparent" />

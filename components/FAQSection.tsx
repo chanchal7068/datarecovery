@@ -128,8 +128,8 @@ export default function FAQSection() {
       </div>
       
       {/* Background Watermark Header (similar to the image background text) */}
-      <div className="absolute bottom-10 left-0 w-full flex justify-center pointer-events-none opacity-[0.03] select-none">
-        <h2 className="text-[3rem] md:text-[6rem] 2xl:text-[8rem] font-black uppercase tracking-tighter whitespace-nowrap leading-none">
+      <div className="absolute bottom-10 left-0 w-full px-4 flex justify-center pointer-events-none opacity-[0.03] select-none">
+        <h2 className="max-w-full text-[clamp(2.75rem,6vw,7rem)] font-black uppercase tracking-tight whitespace-nowrap leading-none">
           Frequently Asked Questions
         </h2>
       </div>

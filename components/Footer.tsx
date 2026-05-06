@@ -1,17 +1,18 @@
 "use client";
 
-import React, { useState, MouseEvent } from 'react';
+import React, { CSSProperties, MouseEvent, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronRight, ArrowRight, Clock, Phone, Mail } from 'lucide-react';
+import { ChevronRight, Clock, Phone, Mail } from 'lucide-react';
 import { publicPath } from '@/lib/site';
 
 export default function Footer() {
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const glowRef = useRef<HTMLDivElement>(null);
 
   const handleMouseMove = (e: MouseEvent<HTMLElement>) => {
     const rect = e.currentTarget.getBoundingClientRect();
-    setMousePos({ x: e.clientX - rect.left, y: e.clientY - rect.top });
+    glowRef.current?.style.setProperty('--glow-x', `${e.clientX - rect.left}px`);
+    glowRef.current?.style.setProperty('--glow-y', `${e.clientY - rect.top}px`);
   };
 
   return (
@@ -21,10 +22,11 @@ export default function Footer() {
     >
       {/* Interactive Mouse Glow */}
       <div 
+        ref={glowRef}
         className="pointer-events-none absolute inset-0 z-0 transition-opacity duration-500 opacity-0 group-hover:opacity-100"
         style={{
-          background: `radial-gradient(600px circle at ${mousePos.x}px ${mousePos.y}px, rgba(227, 24, 55, 0.08), transparent 80%)`
-        }}
+          background: 'radial-gradient(720px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(227, 24, 55, 0.16), transparent 78%)'
+        } as CSSProperties}
       />
       
       {/* Decorative Red Glow on the left, matching the image */}

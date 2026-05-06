@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "@/styles/globals.css";
-import NextTopLoader from "nextjs-toploader";
-import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Modern Next.js Dashboard",
@@ -23,9 +21,7 @@ export default function RootLayout({
         className="min-h-full flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-900 dark:text-slate-100 font-sans"
         suppressHydrationWarning
       >
-        <NextTopLoader color="#3b82f6" showSpinner={false} />
         {children}
-        <Toaster position="bottom-right" />
       </body>
     </html>
   );

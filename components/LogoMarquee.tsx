@@ -3,15 +3,15 @@ import Image from 'next/image';
 import { publicPath } from '@/lib/site';
 
 const logos = [
-  { name: 'Agilent Technologies', src: publicPath('/images/partner_companies/agilent_technologies_logo.png') },
-  { name: 'Airtel', src: publicPath('/images/partner_companies/airtel-logo.png') },
-  { name: 'Bharat Petroleum', src: publicPath('/images/partner_companies/bharat-petroleum_logo.png') },
-  { name: 'Blue Star', src: publicPath('/images/partner_companies/blue-star-logo.png') },
-  { name: 'BSNL', src: publicPath('/images/partner_companies/bsnl_logo.png') },
-  { name: 'Columbia Asia', src: publicPath('/images/partner_companies/columbia_asia_logo.png') },
-  { name: 'ITC Limited', src: publicPath('/images/partner_companies/itc_limited_logo.png') },
-  { name: 'Kennametal', src: publicPath('/images/partner_companies/kennametal_logo.png') },
-  { name: 'SKF', src: publicPath('/images/partner_companies/skf_logo.webp') },
+  { name: 'Agilent Technologies', src: publicPath('/images/partner_companies/agilent_technologies_logo.png'), className: 'h-10 sm:h-12' },
+  { name: 'Airtel', src: publicPath('/images/partner_companies/airtel-logo.png'), className: 'h-10 sm:h-12' },
+  { name: 'Bharat Petroleum', src: publicPath('/images/partner_companies/bharat-petroleum_logo.png'), className: 'h-10 sm:h-12' },
+  { name: 'Blue Star', src: publicPath('/images/partner_companies/blue-star-logo.png'), className: 'h-8 sm:h-10' },
+  { name: 'BSNL', src: publicPath('/images/partner_companies/bsnl_logo.png'), className: 'h-10 sm:h-12' },
+  { name: 'Columbia Asia', src: publicPath('/images/partner_companies/columbia_asia_logo.png'), className: 'h-8 sm:h-10' },
+  { name: 'ITC Limited', src: publicPath('/images/partner_companies/itc_limited_logo.png'), className: 'h-10 sm:h-12' },
+  { name: 'Kennametal', src: publicPath('/images/partner_companies/kennametal_logo.png'), className: 'h-8 sm:h-10' },
+  { name: 'SKF', src: publicPath('/images/partner_companies/skf_logo.webp'), className: 'h-10 sm:h-12' },
 ];
 
 export default function LogoMarquee() {
@@ -21,7 +21,7 @@ export default function LogoMarquee() {
   return (
     <div className="py-12 bg-white border-b border-gray-100 overflow-hidden">
       <div className="max-w-7xl 3xl:max-w-[1760px] mx-auto px-4 mb-8">
-        <h2 className="text-center text-gray-400 text-sm font-semibold uppercase tracking-widest">
+        <h2 className="text-center text-gray-400 text-sm font-extrabold uppercase tracking-widest">
           Trusted by 100+ Companies Globally
         </h2>
       </div>
@@ -35,7 +35,7 @@ export default function LogoMarquee() {
                 alt={logo.name}
                 width={150}
                 height={60}
-                className="h-10 sm:h-12 w-auto object-contain"
+                className={`${logo.className} w-auto max-w-[220px] object-contain`}
               />
             </div>
           ))}
