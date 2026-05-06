@@ -83,10 +83,10 @@ export default function FAQSection() {
         
         {/* Section Header */}
         <div className="text-center mb-12 2xl:mb-16">
-          <p className="inline-flex items-center gap-3 text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase mb-4 2xl:mb-5">
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+          <p className="inline-flex items-center gap-3 text-[#e11f27] font-semibold text-sm 2xl:text-base uppercase tracking-widest mb-4 2xl:mb-5">
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
             GET ANSWERS
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
           </p>
           <h2 className="text-3xl md:text-4xl 2xl:text-5xl font-extrabold text-[#0f172a] tracking-tight">
             Frequently Asked Questions

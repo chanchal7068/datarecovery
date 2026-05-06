@@ -117,10 +117,10 @@ export default function PricingSection() {
         
         {/* Header */}
         <div className="text-center mb-16">
-          <p className="inline-flex items-center gap-3 text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase mb-4 2xl:mb-5">
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+          <p className="inline-flex items-center gap-3 text-[#4facfe] font-semibold text-sm 2xl:text-base uppercase tracking-widest mb-4 2xl:mb-5">
+            <span className="h-px w-8 2xl:w-12 bg-[#4facfe]" />
             {'// AFFORDABLE'}
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            <span className="h-px w-8 2xl:w-12 bg-[#4facfe]" />
           </p>
           <h2 className="text-4xl md:text-5xl font-bold text-white">
             Plan and Pricing

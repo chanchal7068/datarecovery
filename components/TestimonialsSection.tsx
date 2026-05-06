@@ -79,10 +79,10 @@ export default function TestimonialsSection() {
         
         {/* Header Section */}
         <div className="text-center mb-24">
-          <p className="inline-flex items-center gap-3 text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase mb-6">
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+          <p className="inline-flex items-center gap-3 text-[#e11f27] font-semibold text-sm 2xl:text-base uppercase tracking-widest mb-6">
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
             {'// OUR CLIENTS'}
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
           </p>
           <h2 className="text-5xl md:text-6xl lg:text-[64px] font-black text-[#1d1d1f] mb-10 leading-tight tracking-tight">
             We are Trusted DSS Clients

@@ -115,11 +115,11 @@ export default function WhyChooseUs() {
         {/* Header */}
         <div className="text-center mb-20">
           <div className="flex items-center justify-center gap-3 mb-4">
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
-            <span className="text-[#ff1a1a] text-xs 2xl:text-sm font-extrabold tracking-[0.25em] uppercase">
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
+            <span className="text-[#e11f27] font-semibold text-sm 2xl:text-base uppercase tracking-widest">
               {'// EXPERT SOLUTIONS'}
             </span>
-            <span className="h-px w-8 2xl:w-12 bg-[#ff1a1a]" />
+            <span className="h-px w-8 2xl:w-12 bg-[#e11f27]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#0f172a] mb-6 leading-tight tracking-tight">
             Why Trust DSS for Your <br className="hidden md:block" /> Data Recovery Needs?

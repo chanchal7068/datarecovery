@@ -7,7 +7,7 @@ export default function CompanyOverview() {
         
         {/* Header Section */}
         <div className="text-center mb-20">
-          <p className="text-[#ff1a1a] text-xs font-bold tracking-[0.3em] uppercase mb-6">
+          <p className="text-[#e11f27] font-semibold text-sm 2xl:text-base uppercase tracking-widest mb-6">
             {'// DATA STORAGE SOLUTIONS'}
           </p>
           <h2 className="text-4xl md:text-5xl lg:text-[56px] font-black text-[#1d1d1f] mb-10 leading-[1.1] tracking-tight">

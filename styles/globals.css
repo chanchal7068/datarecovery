@@ -15,7 +15,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 @theme {
@@ -26,6 +26,45 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-sans);
+}
+
+button,
+input,
+textarea,
+select,
+a,
+span,
+div {
+  font-family: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+.font-black,
+.font-extrabold,
+.font-bold,
+[class*="text-3xl"],
+[class*="text-4xl"],
+[class*="text-5xl"],
+[class*="text-6xl"],
+[class*="text-7xl"],
+[class*="text-[2rem]"],
+[class*="text-[2.6rem]"],
+[class*="text-[3.4rem]"],
+[class*="text-[56px]"],
+[class*="text-[64px]"] {
+  font-family: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+}
+
+p {
+  font-family: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
 /* Custom utilities */
@@ -68,7 +107,7 @@ body {
 .animate-marquee {
   display: flex;
   width: max-content;
-  animation: marquee 40s linear infinite;
+  animation: marquee 60s linear infinite;
 }
 
 .animate-marquee:hover {

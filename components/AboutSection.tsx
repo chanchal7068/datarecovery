@@ -9,11 +9,11 @@ export default function AboutSection() {
       <div className="max-w-[1366px] 2xl:max-w-[1760px] mx-auto px-4 sm:px-6 lg:px-16 2xl:px-20 relative z-10">
         {/* Top label */}
         <div className="flex items-center justify-center gap-2 2xl:gap-3 mb-4 2xl:mb-5">
-          <span className="h-px w-10 2xl:w-14 bg-[#ff1a1a]" />
-          <span className="text-[#ff1a1a] font-semibold text-sm 2xl:text-base uppercase tracking-widest">
+          <span className="h-px w-10 2xl:w-14 bg-[#e11f27]" />
+          <span className="text-[#e11f27] font-semibold text-sm 2xl:text-base uppercase tracking-widest">
             #1 Data Recovery Services
           </span>
-          <span className="h-px w-10 2xl:w-14 bg-[#ff1a1a]" />
+          <span className="h-px w-10 2xl:w-14 bg-[#e11f27]" />
         </div>
 
         {/* Main heading */}
@@ -28,7 +28,7 @@ export default function AboutSection() {
         {/* Two-column layout */}
         <div className="space-y-12 2xl:space-y-16">
           {/* Left — paragraphs */}
-          <div className="max-w-5xl 2xl:max-w-[1380px] mx-auto space-y-5 2xl:space-y-6 text-[#4b5563] leading-[1.85] 2xl:leading-[1.9] text-[15.5px] 2xl:text-[18px] text-justify">
+          <div className="max-w-6xl 2xl:max-w-[1500px] mx-auto space-y-7 text-center text-[#111827] leading-[1.7] 2xl:leading-[1.75] text-[18px] 2xl:text-[24px] font-normal">
             <p>
               Data Storage Solutions bring hope to businesses and individuals that lose their
               data either intentionally or because of some mishap, hardware malfunction, or
