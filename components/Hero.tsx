@@ -57,10 +57,10 @@ export default function Hero() {
 
 
 
-      <div className="max-w-7xl 2xl:max-w-[1760px] 2xl:min-h-[calc(100vh-88px)] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-20 relative z-10 pt-24 2xl:pt-0 pb-32 2xl:pb-20 flex flex-col lg:flex-row items-center gap-10 2xl:gap-24">
+      <div className="max-w-7xl 2xl:max-w-[1760px] 2xl:min-h-[calc(100vh-88px)] mx-auto px-4 sm:px-6 lg:px-8 2xl:px-20 relative z-10 pt-24 2xl:pt-0 pb-32 2xl:pb-20 flex flex-col-reverse lg:flex-row items-center gap-10 2xl:gap-24">
 
         {/* Left Column Content */}
-        <div className="w-full lg:w-1/2 2xl:max-w-[820px] text-[#0f172a]">
+        <div className="w-full lg:w-1/2 2xl:max-w-[820px] text-[#0f172a] mt-10 lg:mt-0">
           <div className="text-[#004b9b] text-xs 2xl:text-sm font-bold tracking-wider uppercase mb-2 2xl:mb-3">
             DATA STORAGE SOLUTIONS
           </div>
@@ -129,7 +129,7 @@ export default function Hero() {
         </div>
 
         {/* Right Column Image */}
-        <div className="w-full lg:w-1/2 mt-8 lg:mt-0 flex justify-end">
+        <div className="w-full lg:w-1/2 flex justify-end">
           <div className="relative w-full max-w-lg 2xl:max-w-[880px] aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl bg-black/10">
             {heroImages.map((src, index) => (
               <Image

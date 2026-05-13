@@ -1,43 +1,43 @@
 'use client';
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ChevronDown, Phone } from 'lucide-react';
+import { ChevronDown, Phone, Menu, X } from 'lucide-react';
 import { publicPath } from '@/lib/site';
 
 // ── Dropdown Data with Images ───────────────────────────────────────
 
 const whoWeAreData = [
-  { title: 'About Us', desc: 'Learn about our history and commitment to data recovery.', img: 'images/headers_img/about_us.jpg' },
-  { title: 'Why Choose Us', desc: 'Discover why thousands trust us with their critical data.', img: 'images/headers_img/why_choose_us.jpg' },
-  { title: 'Vision & Mission', desc: 'Our goal is to be the world leader in data recovery.', img: 'images/headers_img/vision_mission.jpg' },
-  { title: 'Quality Policy', desc: 'Strict standards to ensure the highest success rates.', img: 'images/headers_img/quality_policy.jpg' },
-  { title: 'Confidentiality', desc: 'Your data is safe with our certified security protocols.', img: 'images/headers_img/confidentiality.jpg' },
+  { title: 'About Us', desc: 'Learn about our history and commitment to data recovery.', img: '/images/headers_img/about_us.jpg', href: '/who-we-are/about-us' },
+  { title: 'Why Choose Us', desc: 'Discover why thousands trust us with their critical data.', img: '/images/headers_img/why_choose_us.jpg', href: '/who-we-are/why-choose-us' },
+  { title: 'Vision & Mission', desc: 'Our goal is to be the world leader in data recovery.', img: '/images/headers_img/vision_mission.jpg', href: '/who-we-are/vision-mission' },
+  { title: 'Quality Policy', desc: 'Strict standards to ensure the highest success rates.', img: '/images/headers_img/quality_policy.jpg', href: '/who-we-are/quality-policy' },
+  { title: 'Confidentiality', desc: 'Your data is safe with our certified security protocols.', img: '/images/headers_img/confidentiality.jpg', href: '/who-we-are/confidentiality' },
 ];
 
 const servicesData = [
-  { title: 'Desktop & Laptop Recovery', desc: 'Expert recovery for all computer types.', img: 'images/headers_img/desktop_laptop.jpg' },
-  { title: 'SSD Data Recovery', desc: 'Fast recovery from all failed solid state drives.', img: 'images/headers_img/ssd_recovery.jpg' },
-  { title: 'Encrypted Data Recovery', desc: 'Decrypting and recovering locked files.', img: 'images/headers_img/encrypted_data.jpg' },
-  { title: 'RAID Server Recovery', desc: 'Enterprise-level RAID and server recovery.', img: 'images/headers_img/raid_server.jpg' },
-  { title: 'External Hard Drive', desc: 'Recovering data from portable drives.', img: 'images/headers_img/external_hard_drive.jpg' },
-  { title: 'Files Data Recovery', desc: 'Specialized recovery for all file types.', img: 'images/headers_img/files_data_recovery.jpg' },
-  { title: 'Flash Card Recovery', desc: 'SD cards, USB sticks, and more.', img: 'images/headers_img/flash_card_recovery.jpg' },
-  { title: 'CCTV Data Recovery', desc: 'Recovering footage from security systems.', img: 'images/headers_img/cctv_data_recovery.jpg' },
-  { title: 'Tapes Data Recovery', desc: 'Legacy tape and archival recovery.', img: 'images/headers_img/tapes_data_recovery.jpg' },
+  { title: 'Desktop & Laptop Recovery', desc: 'Expert recovery for all computer types.', img: '/images/headers_img/desktop_laptop.jpg', href: '/services/desktop-laptop-recovery' },
+  { title: 'SSD Data Recovery', desc: 'Fast recovery from all failed solid state drives.', img: '/images/headers_img/ssd_recovery.jpg', href: '/services/ssd-data-recovery' },
+  { title: 'Encrypted Data Recovery', desc: 'Decrypting and recovering locked files.', img: '/images/headers_img/encrypted_data.jpg', href: '/services/encrypted-data-recovery' },
+  { title: 'RAID Server Recovery', desc: 'Enterprise-level RAID and server recovery.', img: '/images/headers_img/raid_server.jpg', href: '/services/raid-server-recovery' },
+  { title: 'External Hard Drive', desc: 'Recovering data from portable drives.', img: '/images/headers_img/external_hard_drive.jpg', href: '/services/external-hard-drive' },
+  { title: 'Files Data Recovery', desc: 'Specialized recovery for all file types.', img: '/images/headers_img/files_data_recovery.jpg', href: '/services/files-data-recovery' },
+  { title: 'Flash Card Recovery', desc: 'SD cards, USB sticks, and more.', img: '/images/headers_img/flash_card_recovery.jpg', href: '/services/flash-card-recovery' },
+  { title: 'CCTV Data Recovery', desc: 'Recovering footage from security systems.', img: '/images/headers_img/cctv_data_recovery.jpg', href: '/services/cctv-data-recovery' },
+  { title: 'Tapes Data Recovery', desc: 'Legacy tape and archival recovery.', img: '/images/headers_img/tapes_data_recovery.jpg', href: '/services/tapes-data-recovery' },
 ];
 
 const dataRecoveryMethodsData = [
-  { title: 'Recovery Methods', desc: 'The advanced techniques we use for recovery.', img: 'images/headers_img/recovery_methods.jpg' },
-  { title: 'Recovery Procedure', desc: 'Step-by-step look at our recovery process.', img: 'images/headers_img/recovery_procedure.jpg' },
-  { title: 'Class 100 Clean Room', desc: 'Our certified dust-free environment.', img: 'images/headers_img/data_recovery_clean_room.jpg' },
+  { title: 'Recovery Methods', desc: 'The advanced techniques we use for recovery.', img: '/images/headers_img/recovery_methods.jpg', href: '/data-recovery/recovery-methods' },
+  { title: 'Recovery Procedure', desc: 'Step-by-step look at our recovery process.', img: '/images/headers_img/recovery_procedure.jpg', href: '/data-recovery/recovery-procedure' },
+  { title: 'Class 100 Clean Room', desc: 'Our certified dust-free environment.', img: '/images/headers_img/data_recovery_clean_room.jpg', href: '/data-recovery/class-100-clean-room' },
 ];
 
 const dssData = [
-  { title: 'Pickup & Delivery', desc: 'Safe transport of your media to our lab.', img: 'images/headers_img/pickup_delivery.jpg' },
-  { title: 'FAQs', desc: 'Answers to common data recovery questions.', img: 'images/headers_img/faqs.jpg' },
-  { title: 'Clients', desc: 'Organizations that trust DSS for recovery.', img: 'images/headers_img/clients.jpg' },
-  { title: 'Testimonials', desc: 'What our happy customers have to say.', img: 'images/headers_img/testimonials.jpg' },
+  { title: 'Pickup & Delivery', desc: 'Safe transport of your media to our lab.', img: '/images/headers_img/pickup_delivery.jpg', href: '/dss/pickup-and-delivery' },
+  { title: 'FAQs', desc: 'Answers to common data recovery questions.', img: '/images/headers_img/faqs.jpg', href: '/dss/faqs' },
+  { title: 'Clients', desc: 'Organizations that trust DSS for recovery.', img: '/images/headers_img/clients.jpg', href: '/dss/clients' },
+  { title: 'Testimonials', desc: 'What our happy customers have to say.', img: '/images/headers_img/testimonials.jpg', href: '/dss/testimonials' },
 ];
 
 // ── Mega Menu Dropdown ───────────────────────────────────────────
@@ -49,7 +49,7 @@ function MegaMenuDropdown({
   menuSize = 'default',
 }: {
   label: string;
-  data: { title: string; desc: string; img: string }[];
+  data: { title: string; desc: string; img: string; href?: string }[];
   columns?: number;
   imageLeft?: boolean;
   menuSize?: 'compact' | 'default' | 'tall';
@@ -100,7 +100,7 @@ function MegaMenuDropdown({
           <div className={`grid ${columns === 4 ? 'grid-cols-4' : 'grid-cols-3'} auto-rows-[94px] gap-5 ${gridHeight} px-8 py-6`}>
             {data.map((item) => (
               <Link
-                href="#"
+                href={item.href || "#"}
                 key={item.title}
                 className={`group border border-gray-200 rounded-xl overflow-hidden hover:border-blue-400 hover:shadow-md transition-all ${imageLeft ? 'flex flex-row' : ''}`}
               >
@@ -143,8 +143,62 @@ function NavLink({ label }: { label: string }) {
   );
 }
 
+// ── Mobile Nav Accordion ──────────────────────────────────────────
+function MobileNavAccordion({
+  label,
+  data,
+  setIsOpen,
+}: {
+  label: string;
+  data: { title: string; href?: string }[];
+  setIsOpen: (v: boolean) => void;
+}) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="border-b border-gray-100 last:border-0">
+      <button
+        onClick={() => setOpen(!open)}
+        className="w-full flex items-center justify-between py-4 text-left font-bold text-slate-800"
+      >
+        {label}
+        <ChevronDown
+          size={18}
+          className={`transition-transform duration-200 ${open ? 'rotate-180' : ''}`}
+        />
+      </button>
+      {open && (
+        <div className="pb-4 pl-4 space-y-3">
+          {data.map((item) => (
+            <Link
+              key={item.title}
+              href={item.href || '#'}
+              onClick={() => setIsOpen(false)}
+              className="block text-sm text-slate-600 hover:text-[#004b9b]"
+            >
+              {item.title}
+            </Link>
+          ))}
+        </div>
+      )}
+    </div>
+  );
+}
+
 // ── Header ─────────────────────────────────────────────────────
 export default function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
     <header className="w-full bg-white/80 sticky top-0 z-50">
       <div className="absolute inset-0 bg-[linear-gradient(180deg,rgba(255,255,255,0.92),rgba(243,250,255,0.78))] backdrop-blur-xl border-b border-[#004b9b]/10" />
@@ -170,11 +224,26 @@ export default function Header() {
             <NavLink label="Home" />
             <MegaMenuDropdown label="Who We Are" data={whoWeAreData} columns={3} imageLeft />
             <MegaMenuDropdown label="Services" data={servicesData} columns={3} imageLeft menuSize="tall" />
-            <NavLink label="Price and Cost" />
+            <Link
+              href="/price-and-cost"
+              className="text-sm 2xl:text-[15px] font-semibold text-[#0f172a] rounded-full px-3 py-2 2xl:px-4 2xl:py-2.5 border border-transparent hover:bg-[#e6f4ff] hover:text-[#004b9b] transition-all"
+            >
+              Price and Cost
+            </Link>
             <MegaMenuDropdown label="Data Recovery" data={dataRecoveryMethodsData} columns={3} imageLeft menuSize="compact" />
             <MegaMenuDropdown label="DSS" data={dssData} columns={4} imageLeft menuSize="compact" />
-            <NavLink label="Claims" />
-            <NavLink label="Contacts" />
+            <Link
+              href="/claims"
+              className="text-sm 2xl:text-[15px] font-semibold text-[#0f172a] rounded-full px-3 py-2 2xl:px-4 2xl:py-2.5 border border-transparent hover:bg-[#e6f4ff] hover:text-[#004b9b] transition-all"
+            >
+              Claims
+            </Link>
+            <Link
+              href="/contacts"
+              className="text-sm 2xl:text-[15px] font-semibold text-[#0f172a] rounded-full px-3 py-2 2xl:px-4 2xl:py-2.5 border border-transparent hover:bg-[#e6f4ff] hover:text-[#004b9b] transition-all"
+            >
+              Contacts
+            </Link>
             <a
               href="tel:+919880872536"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-[#e11f27] bg-[#e11f27] px-5 2xl:px-7 py-3 2xl:py-3.5 text-xs 2xl:text-[15px] font-extrabold text-white transition-colors hover:bg-[#c91b22] whitespace-nowrap"
@@ -184,6 +253,84 @@ export default function Header() {
             </a>
           </nav>
 
+          {/* Mobile Menu Toggle Button */}
+          <button
+            className="md:hidden flex items-center justify-center p-2 -mr-2 text-[#1d1d1f] hover:text-[#004b9b] transition-all duration-300 active:scale-90"
+            onClick={() => setIsMobileMenuOpen(true)}
+          >
+            <Menu size={32} strokeWidth={2.5} />
+          </button>
+
+        </div>
+      </div>
+
+      {/* ── Mobile Menu Overlay ─────────────────────────────────────── */}
+      <div
+        className={`fixed inset-0 z-[100] bg-white flex flex-col md:hidden overflow-y-auto transition-transform duration-400 ease-in-out ${isMobileMenuOpen ? 'translate-x-0 pointer-events-auto' : 'translate-x-full pointer-events-none'
+          }`}
+      >
+        {/* Mobile Header */}
+        <div className="flex items-center justify-between px-4 sm:px-6 h-[70px] border-b border-slate-100 shrink-0 bg-white sticky top-0 z-10">
+          <Image
+            src={publicPath('/images/data_recovery_logo.webp')}
+            alt="Data Storage Solutions"
+            width={160}
+            height={48}
+            className="h-8 w-auto object-contain"
+          />
+          <button
+            className="p-2 -mr-2 text-[#1d1d1f] hover:text-[#e11f27] transition-all duration-300 hover:rotate-90 active:scale-90"
+            onClick={() => setIsMobileMenuOpen(false)}
+          >
+            <X size={32} strokeWidth={2.5} />
+          </button>
+        </div>
+
+        {/* Mobile Menu Links */}
+        <div className="px-6 py-4 flex-1">
+          <Link
+            href="/"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-4 font-bold text-slate-800 border-b border-slate-100"
+          >
+            Home
+          </Link>
+          <MobileNavAccordion label="Who We Are" data={whoWeAreData} setIsOpen={setIsMobileMenuOpen} />
+          <MobileNavAccordion label="Services" data={servicesData} setIsOpen={setIsMobileMenuOpen} />
+          <Link
+            href="/price-and-cost"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-4 font-bold text-slate-800 border-b border-slate-100"
+          >
+            Price and Cost
+          </Link>
+          <MobileNavAccordion label="Data Recovery" data={dataRecoveryMethodsData} setIsOpen={setIsMobileMenuOpen} />
+          <MobileNavAccordion label="DSS" data={dssData} setIsOpen={setIsMobileMenuOpen} />
+          <Link
+            href="/claims"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-4 font-bold text-slate-800 border-b border-slate-100"
+          >
+            Claims
+          </Link>
+          <Link
+            href="/contacts"
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="block py-4 font-bold text-slate-800 border-b border-slate-100"
+          >
+            Contacts
+          </Link>
+        </div>
+
+        {/* Mobile Call CTA */}
+        <div className="px-6 pb-8 pt-4 bg-slate-50 border-t border-slate-100 shrink-0">
+          <a
+            href="tel:+919880872536"
+            className="w-full flex items-center justify-center gap-2 rounded-lg border border-[#e11f27] bg-[#e11f27] px-5 py-3.5 text-[15px] font-extrabold text-white transition-all duration-300 hover:bg-[#c91b22] hover:shadow-lg active:scale-95"
+          >
+            <Phone size={18} strokeWidth={2.5} />
+            +91 988087 2536
+          </a>
         </div>
       </div>
     </header>
