@@ -14,11 +14,13 @@ interface PageHeaderProps {
 export default function PageHeader({ title, breadcrumb = [], backgroundImage }: PageHeaderProps) {
   return (
     <section className="relative bg-[#0b0c2a] text-white py-24 overflow-hidden border-b-4 border-blue-600">
-      {/* Background overlay */}
+      {/* Background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url('${publicPath(backgroundImage)}')` }}
       ></div>
+      {/* Overlay to improve text readability */}
+      <div className="absolute inset-0 bg-black/60"></div>
       <div className="max-w-7xl mx-auto px-4 relative z-10 flex flex-col md:flex-row justify-between items-center">
         <h1 className="text-4xl md:text-5xl font-bold font-montserrat">{title}</h1>
         {breadcrumb.length > 0 && (

@@ -113,6 +113,8 @@ function MegaMenuDropdown({
                     sizes={imageLeft ? '112px' : '(min-width: 768px) 33vw, 100vw'}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
+                  {/* Subtle overlay for better depth */}
+                  <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
                 </div>
                 <div className={`px-4 py-3 bg-white ${imageLeft ? 'flex flex-col justify-center' : ''}`}>
                   <p className="text-[11px] font-bold uppercase tracking-wide text-gray-800 group-hover:text-[#004b9b] transition-colors leading-snug">
