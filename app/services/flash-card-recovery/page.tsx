@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function SectionHeading({ icon: Icon, title, iconBg, iconColor }: {
@@ -34,7 +34,7 @@ export default function FlashCardRecovery() {
 
       <PageHeader
         title="Flash Card Data Recovery"
-        backgroundImage="/images/headers_img/flash_card_recovery.jpg"
+        backgroundImage="/images/services/flash_drive_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -85,7 +85,7 @@ export default function FlashCardRecovery() {
             <p className="text-slate-600 text-sm leading-relaxed">
               <span className="font-bold text-[#3da3ff]">Data Storage Solutions</span> provides services for anyone who is in search of digital photo recovery solutions for SmartMedia, CompactFlash, Memory Stick (smart platter), MMC-SD, miniSD, PCMCIA, Microdrive, USB Flash Drive, JetFlash, SD or PC Card image storage devices.
             </p>
-            
+
             <div className="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl my-6">
               <p className="text-amber-800 text-sm font-medium mb-3">
                 In situations where you have data deleted from your USB flash drive, or if you format it by mistake, we suggest not to PANIC.
@@ -111,7 +111,7 @@ export default function FlashCardRecovery() {
         {/* Data Loss Circumstances */}
         <div>
           <SectionHeading icon={AlertTriangle} title="Data loss or corruption could happen in a USB Flash drive under the following circumstances:" iconBg="bg-rose-50" iconColor="text-rose-600" />
-          
+
           <div className="grid sm:grid-cols-3 gap-4 mt-6">
             {[
               {

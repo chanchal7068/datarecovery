@@ -9,10 +9,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function BulletList({ items, color = 'text-[#3da3ff]' }: { items: string[]; color?: string }) {
@@ -48,7 +48,7 @@ export default function SSDDataRecovery() {
 
       <PageHeader
         title="SSD Data Recovery"
-        backgroundImage="/images/headers_img/ssd_recovery.jpg"
+        backgroundImage="/images/services/ssd_data_recovery.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -101,7 +101,7 @@ export default function SSDDataRecovery() {
               Solid State Drives are referred commonly to as SSD. It&apos;s a <span className="font-bold text-[#3da3ff]">data storage</span> platter/medium which uses solid-state memory to store data. These devices are hailed for their features for their reliability, portability, and speed. It is similar to a hard disk except that, it doesn&apos;t have any mechanical or moving parts. It has numerous advantages over hard disk along with features like:
             </p>
           </div>
-          
+
           <div className="mt-4 mb-6">
             <div className="grid sm:grid-cols-2 gap-x-10 gap-y-2">
               <BulletList items={[

@@ -14,7 +14,7 @@ export default function WhyChooseUs() {
       {/* Hero Section */}
       <PageHeader
         title="Why Choose Us"
-        backgroundImage="/images/headers_img/why_choose_us.jpg"
+        backgroundImage="/images/who_we_are/why_choose_us_banner.jpg"
         breadcrumb={[{ label: 'HOME', href: '/' }, { label: 'WHY CHOOSE US' }]}
       />
 

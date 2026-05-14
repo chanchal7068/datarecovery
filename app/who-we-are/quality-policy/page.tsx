@@ -4,22 +4,22 @@ import PageHeader from '@/components/PageHeader';
 import { CheckCircle2, Star, ClipboardCheck, Lightbulb, Users, TrendingUp, Heart, Zap, ShieldCheck } from 'lucide-react';
 
 const values = [
-  { icon: ClipboardCheck, label: 'Quality',             desc: 'Highest standards in every recovery job we undertake.' },
-  { icon: Star,           label: 'Value',               desc: 'Cost-effective solutions without compromising results.' },
-  { icon: Heart,          label: 'Convenience',         desc: 'Pickup & delivery services at your doorstep.' },
-  { icon: ShieldCheck,    label: 'Commitment',          desc: 'We stand by our No Data, No Cost promise.' },
-  { icon: TrendingUp,     label: 'Excellence',          desc: 'Class 100 Clean Room with 99% success rate.' },
-  { icon: Zap,            label: 'Continual Improvement', desc: 'Always evolving with the latest recovery tech.' },
-  { icon: Users,          label: 'Teamwork',            desc: '20+ years of expert collaboration & dedication.' },
-  { icon: Lightbulb,      label: 'Innovation',          desc: 'Cutting-edge tools for even the toughest recoveries.' },
-  { icon: CheckCircle2,   label: 'Customer-Centric',   desc: 'Your satisfaction is the only metric that matters.' },
+  { icon: ClipboardCheck, label: 'Quality', desc: 'Highest standards in every recovery job we undertake.' },
+  { icon: Star, label: 'Value', desc: 'Cost-effective solutions without compromising results.' },
+  { icon: Heart, label: 'Convenience', desc: 'Pickup & delivery services at your doorstep.' },
+  { icon: ShieldCheck, label: 'Commitment', desc: 'We stand by our No Data, No Cost promise.' },
+  { icon: TrendingUp, label: 'Excellence', desc: 'Class 100 Clean Room with 99% success rate.' },
+  { icon: Zap, label: 'Continual Improvement', desc: 'Always evolving with the latest recovery tech.' },
+  { icon: Users, label: 'Teamwork', desc: '20+ years of expert collaboration & dedication.' },
+  { icon: Lightbulb, label: 'Innovation', desc: 'Cutting-edge tools for even the toughest recoveries.' },
+  { icon: CheckCircle2, label: 'Customer-Centric', desc: 'Your satisfaction is the only metric that matters.' },
 ];
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 export default function QualityPolicy() {
@@ -30,7 +30,7 @@ export default function QualityPolicy() {
       {/* Hero Section */}
       <PageHeader
         title="Quality Policy"
-        backgroundImage="/images/headers_img/quality_policy.jpg"
+        backgroundImage="/images/who_we_are/quality_policy_banner.jpg"
         breadcrumb={[{ label: 'HOME', href: '/' }, { label: 'QUALITY POLICY' }]}
       />
 

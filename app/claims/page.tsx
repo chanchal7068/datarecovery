@@ -9,7 +9,7 @@ export default function ClaimsPage() {
 
       <PageHeader
         title="Claims"
-        backgroundImage="/images/headers_img/about_us.jpg"
+        backgroundImage="/images/claims_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'CLAIMS' },

@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function SectionHeading({ icon: Icon, title, iconBg, iconColor }: {
@@ -34,7 +34,7 @@ export default function ExternalHardDrive() {
 
       <PageHeader
         title="External Hard Drive Data Recovery"
-        backgroundImage="/images/headers_img/external_hard_drive.jpg"
+        backgroundImage="/images/services/extrenal_hdd_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -104,7 +104,7 @@ export default function ExternalHardDrive() {
         {/* Guidelines / Services Offered */}
         <div>
           <SectionHeading icon={ShieldCheck} title="External Hard Drive Care & Recovery Guidelines:" iconBg="bg-emerald-50" iconColor="text-emerald-600" />
-          
+
           <div className="grid sm:grid-cols-2 gap-4 mt-4">
             {[
               {

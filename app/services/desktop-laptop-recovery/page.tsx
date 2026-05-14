@@ -122,7 +122,7 @@ export default function DesktopLaptopRecovery() {
 
       <PageHeader
         title="Desktop & Laptop Hard Drive Data Recovery Services"
-        backgroundImage="/images/headers_img/desktop_laptop.jpg"
+        backgroundImage="/images/services/laptop_recovery_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },

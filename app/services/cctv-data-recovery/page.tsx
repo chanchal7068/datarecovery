@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function SectionHeading({ icon: Icon, title, iconBg, iconColor }: {
@@ -34,7 +34,7 @@ export default function CctvDataRecovery() {
 
       <PageHeader
         title="CCTV Data Recovery"
-        backgroundImage="/images/headers_img/cctv_data_recovery.jpg"
+        backgroundImage="/images/services/cctv_data_recovery_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -101,7 +101,7 @@ export default function CctvDataRecovery() {
         {/* Causes for Damage */}
         <div>
           <SectionHeading icon={AlertTriangle} title="The following could be the causes for the damage:" iconBg="bg-rose-50" iconColor="text-rose-600" />
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-6">
             {[
               {
@@ -152,7 +152,7 @@ export default function CctvDataRecovery() {
         <div>
           <SectionHeading icon={ShieldCheck} title="Our Expertise & Capabilities" iconBg="bg-teal-50" iconColor="text-teal-600" />
           <div className="grid md:grid-cols-2 gap-6 mt-4">
-            
+
             <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6 flex flex-col">
               <div className="h-12 w-12 rounded-full bg-blue-100 flex items-center justify-center mb-4 shrink-0">
                 <Video className="h-6 w-6 text-blue-600" />

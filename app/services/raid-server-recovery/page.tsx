@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function BulletList({ items, color = 'text-[#3da3ff]' }: { items: string[]; color?: string }) {
@@ -47,7 +47,7 @@ export default function RaidServerRecovery() {
 
       <PageHeader
         title="RAID Server Data Recovery"
-        backgroundImage="/images/headers_img/raid_server.jpg"
+        backgroundImage="/images/services/raid_recovery_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -133,7 +133,7 @@ export default function RaidServerRecovery() {
         {/* Types of RAID: Software vs Hardware */}
         <div>
           <SectionHeading icon={Layers} title="Types of RAID" iconBg="bg-blue-50" iconColor="text-blue-600" />
-          
+
           <div className="grid md:grid-cols-2 gap-8 mt-6">
             {/* Software RAID */}
             <div className="bg-slate-50 border border-slate-100 rounded-2xl p-6">
@@ -213,32 +213,32 @@ export default function RaidServerRecovery() {
         {/* Configurations, Levels, Drives */}
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-             <h3 className="text-slate-900 font-bold text-lg mb-4">RAID Array Configurations</h3>
-             <p className="text-slate-500 text-xs mb-3">DSS is an expert in all Disk based Hardware and Software RAID Array Configurations, like:</p>
-             <div className="flex flex-wrap gap-2">
-               {['RAID 0', 'RAID 1', 'RAID 10', 'RAID 1E', 'RAID 3', 'RAID 4', 'RAID 5', 'RAID 5E', 'RAID 6', 'RAID 50', 'RAID 60', 'RAID ADG', 'RAID 0+1', 'JBOD', 'SPAN'].map((item) => (
-                 <span key={item} className="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">
-                   {item}
-                 </span>
-               ))}
-             </div>
+            <h3 className="text-slate-900 font-bold text-lg mb-4">RAID Array Configurations</h3>
+            <p className="text-slate-500 text-xs mb-3">DSS is an expert in all Disk based Hardware and Software RAID Array Configurations, like:</p>
+            <div className="flex flex-wrap gap-2">
+              {['RAID 0', 'RAID 1', 'RAID 10', 'RAID 1E', 'RAID 3', 'RAID 4', 'RAID 5', 'RAID 5E', 'RAID 6', 'RAID 50', 'RAID 60', 'RAID ADG', 'RAID 0+1', 'JBOD', 'SPAN'].map((item) => (
+                <span key={item} className="px-3 py-1.5 bg-slate-100 text-slate-700 text-xs font-semibold rounded-lg border border-slate-200">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
           <div>
             <h3 className="text-slate-900 font-bold text-lg mb-4">RAID Drive Types</h3>
-             <ul className="space-y-2">
-                {[
-                  'SATA/PATA (IDE) / ATA / ZIF / LIF',
-                  'SAS / SCSI / FC',
-                  'SSD / Flash / Micro SATA / mSATA',
-                  'M.2 (SATA & NVMe) / PCIe',
-                  'CFast / CF / SD / Micro SD / Memory'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <HardDrive className="text-[#3da3ff] mt-0.5 h-4 w-4 shrink-0" />
-                    <span className="text-slate-600 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <ul className="space-y-2">
+              {[
+                'SATA/PATA (IDE) / ATA / ZIF / LIF',
+                'SAS / SCSI / FC',
+                'SSD / Flash / Micro SATA / mSATA',
+                'M.2 (SATA & NVMe) / PCIe',
+                'CFast / CF / SD / Micro SD / Memory'
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <HardDrive className="text-[#3da3ff] mt-0.5 h-4 w-4 shrink-0" />
+                  <span className="text-slate-600 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
@@ -271,30 +271,30 @@ export default function RaidServerRecovery() {
         {/* Storage Media & Manufacturers */}
         <div className="grid md:grid-cols-2 gap-8">
           <div>
-             <h3 className="text-slate-900 font-bold text-lg mb-4">Storage Media Types</h3>
-             <ul className="space-y-3">
-                {[
-                  'Desktop/Laptop Hard Drives',
-                  'NAS (Network Attached Storage)',
-                  'SAN (Storage Area Network)',
-                  'Server Hard Drives (Web/File/Database etc.)'
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Database className="text-emerald-500 mt-0.5 h-4 w-4 shrink-0" />
-                    <span className="text-slate-600 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
+            <h3 className="text-slate-900 font-bold text-lg mb-4">Storage Media Types</h3>
+            <ul className="space-y-3">
+              {[
+                'Desktop/Laptop Hard Drives',
+                'NAS (Network Attached Storage)',
+                'SAN (Storage Area Network)',
+                'Server Hard Drives (Web/File/Database etc.)'
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <Database className="text-emerald-500 mt-0.5 h-4 w-4 shrink-0" />
+                  <span className="text-slate-600 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
           </div>
           <div>
             <h3 className="text-slate-900 font-bold text-lg mb-4">RAID ARRAY Manufacturers</h3>
-             <div className="flex flex-wrap gap-2">
-               {['Lenovo', 'NetApp', 'HP', 'EMC', 'Dell/Wyse', 'Hitachi Data Systems', 'IBM', 'Netgear', 'LaCie/Seagate', 'Synology', 'Qnap', 'Buffalo', 'Drobo', 'Promise', 'Apple'].map((item) => (
-                 <span key={item} className="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-semibold rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-100 transition-colors cursor-default">
-                   {item}
-                 </span>
-               ))}
-             </div>
+            <div className="flex flex-wrap gap-2">
+              {['Lenovo', 'NetApp', 'HP', 'EMC', 'Dell/Wyse', 'Hitachi Data Systems', 'IBM', 'Netgear', 'LaCie/Seagate', 'Synology', 'Qnap', 'Buffalo', 'Drobo', 'Promise', 'Apple'].map((item) => (
+                <span key={item} className="px-3 py-1.5 bg-slate-50 text-slate-600 text-xs font-semibold rounded-lg border border-slate-200 hover:border-slate-300 hover:bg-slate-100 transition-colors cursor-default">
+                  {item}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
 

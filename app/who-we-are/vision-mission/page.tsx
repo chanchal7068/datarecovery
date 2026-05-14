@@ -26,7 +26,7 @@ export default function VisionMission() {
       {/* Hero Section */}
       <PageHeader
         title="Vision & Mission"
-        backgroundImage="/images/headers_img/vision_mission.jpg"
+        backgroundImage="/images/who_we_are/vision_mission_banner.jpg"
         breadcrumb={[{ label: 'HOME', href: '/' }, { label: 'VISION & MISSION' }]}
       />
 

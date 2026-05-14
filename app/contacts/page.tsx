@@ -137,7 +137,7 @@ export default function ContactsPage() {
 
       <PageHeader
         title="Contacts"
-        backgroundImage="/images/headers_img/about_us.jpg"
+        backgroundImage="/images/contact_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'CONTACTS' },

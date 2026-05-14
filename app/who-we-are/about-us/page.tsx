@@ -15,7 +15,7 @@ export default function AboutUs() {
       {/* Hero Section */}
       <PageHeader
         title="About Us"
-        backgroundImage="/images/headers_img/about_us.jpg"
+        backgroundImage="/images/who_we_are/about_us_banner.jpg"
         breadcrumb={[{ label: 'HOME', href: '/' }, { label: 'ABOUT US' }]}
       />
 
@@ -33,7 +33,7 @@ export default function AboutUs() {
               ABOUT DATA RECOVERY SERVICES IN BANGALORE
             </span>
 
-            <h3 className="text-3xl md:text-4xl lg:text-5xl font-black font-montserrat text-slate-900 mb-6 leading-tight">
+            <h3 className="text-3xl md:text-4xl lg:text-5xl font-zblack font-montserrat text-slate-900 mb-6 leading-tight">
               Data Recovery<br />
               <span className="text-[#3da3ff]">Services</span> in Bangalore
             </h3>
@@ -150,10 +150,10 @@ export default function AboutUs() {
             <div className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.2)] hover:-translate-y-2 transition-all duration-500 cursor-pointer">
               <div className="h-16 w-16 rounded-2xl bg-blue-50 group-hover:bg-blue-100 flex items-center justify-center mb-5 transition-colors duration-300 border border-blue-100">
                 <svg viewBox="0 0 24 24" className="w-9 h-9" fill="none">
-                  <path d="M3 5.5L11 4v8H3V5.5Z" fill="#0078D4"/>
-                  <path d="M12 3.82L21 2.5V12h-9V3.82Z" fill="#0078D4"/>
-                  <path d="M3 13h8v7.5L3 19V13Z" fill="#0078D4"/>
-                  <path d="M12 13h9v8.5L12 20.18V13Z" fill="#0078D4"/>
+                  <path d="M3 5.5L11 4v8H3V5.5Z" fill="#0078D4" />
+                  <path d="M12 3.82L21 2.5V12h-9V3.82Z" fill="#0078D4" />
+                  <path d="M3 13h8v7.5L3 19V13Z" fill="#0078D4" />
+                  <path d="M12 13h9v8.5L12 20.18V13Z" fill="#0078D4" />
                 </svg>
               </div>
               <h4 className="font-bold text-slate-800 text-lg group-hover:text-[#3b82f6] transition-colors">Windows</h4>
@@ -164,7 +164,7 @@ export default function AboutUs() {
             <div className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.2)] hover:-translate-y-2 transition-all duration-500 cursor-pointer">
               <div className="h-16 w-16 rounded-2xl bg-slate-50 group-hover:bg-slate-100 flex items-center justify-center mb-5 transition-colors duration-300 border border-slate-100">
                 <svg viewBox="0 0 24 24" className="w-9 h-9" fill="currentColor">
-                  <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z"/>
+                  <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.54 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701z" />
                 </svg>
               </div>
               <h4 className="font-bold text-slate-800 text-lg group-hover:text-[#3b82f6] transition-colors">Apple</h4>
@@ -175,7 +175,7 @@ export default function AboutUs() {
             <div className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.2)] hover:-translate-y-2 transition-all duration-500 cursor-pointer">
               <div className="h-16 w-16 rounded-2xl bg-amber-50 group-hover:bg-amber-100 flex items-center justify-center mb-5 transition-colors duration-300 border border-amber-100">
                 <svg viewBox="0 0 24 24" className="w-9 h-9" fill="currentColor">
-                  <path d="M12.504 0c-.155 0-.315.008-.48.021C7.576.299 3.203 3.865 2.684 8.62c-.24 2.262.113 4.204.938 5.791-.25.894-.437 2.02-.406 3.224.068 2.619 1.139 4.023 2.565 4.023.849 0 1.682-.417 2.514-1.217a11.5 11.5 0 001.5.82c-.16.71-.316 1.71-.322 2.68-.03 2.432 1.081 3.855 2.712 3.855.888 0 1.784-.455 2.556-1.38.788 1.06 1.724 1.38 2.572 1.38 1.708 0 2.741-1.636 2.741-4.256 0-.989-.154-2.144-.38-3.144a11.34 11.34 0 001.38-.772c.862.822 1.722 1.254 2.594 1.254 1.411 0 2.463-1.347 2.463-3.777a8.26 8.26 0 00-.395-2.494c.673-1.46.979-3.254.735-5.281C23.12 3.6 18.548.028 13.952.003c-.483-.003-.963.003-1.448.003zm-.037 1.88c.4 0 .8.007 1.198.022 3.856.143 7.652 2.869 8.138 6.661.17 1.333-.026 2.605-.522 3.703.049.255.089.516.12.776l.023.176c.142 1.102.144 2.11.014 2.887-.126.76-.387 1.226-.722 1.226-.395 0-.96-.387-1.638-1.26l-.37-.472-.405.44c-.35.38-.725.75-1.114 1.11l-.468.424.361.521c.553.798.933 1.613.997 2.327.073.814-.158 1.36-.614 1.36-.54 0-1.119-.496-1.697-1.431l-.338-.545-.42.49c-.744.868-1.485 1.325-2.123 1.325-.739 0-1.26-.685-1.24-2.076.008-.84.154-1.762.303-2.49l.122-.607-.597-.188c-.48-.152-.947-.37-1.395-.654l-.476-.302-.344.449c-.665.866-1.279 1.291-1.793 1.291-.57 0-1.032-.638-1.057-2.017-.022-.93.138-1.82.354-2.604l.08-.29-.151-.265c-.63-1.102-.93-2.707-.72-4.571.39-3.677 3.87-6.6 7.837-6.869.391-.027.784-.041 1.176-.043z" fill="#f5a623"/>
+                  <path d="M12.504 0c-.155 0-.315.008-.48.021C7.576.299 3.203 3.865 2.684 8.62c-.24 2.262.113 4.204.938 5.791-.25.894-.437 2.02-.406 3.224.068 2.619 1.139 4.023 2.565 4.023.849 0 1.682-.417 2.514-1.217a11.5 11.5 0 001.5.82c-.16.71-.316 1.71-.322 2.68-.03 2.432 1.081 3.855 2.712 3.855.888 0 1.784-.455 2.556-1.38.788 1.06 1.724 1.38 2.572 1.38 1.708 0 2.741-1.636 2.741-4.256 0-.989-.154-2.144-.38-3.144a11.34 11.34 0 001.38-.772c.862.822 1.722 1.254 2.594 1.254 1.411 0 2.463-1.347 2.463-3.777a8.26 8.26 0 00-.395-2.494c.673-1.46.979-3.254.735-5.281C23.12 3.6 18.548.028 13.952.003c-.483-.003-.963.003-1.448.003zm-.037 1.88c.4 0 .8.007 1.198.022 3.856.143 7.652 2.869 8.138 6.661.17 1.333-.026 2.605-.522 3.703.049.255.089.516.12.776l.023.176c.142 1.102.144 2.11.014 2.887-.126.76-.387 1.226-.722 1.226-.395 0-.96-.387-1.638-1.26l-.37-.472-.405.44c-.35.38-.725.75-1.114 1.11l-.468.424.361.521c.553.798.933 1.613.997 2.327.073.814-.158 1.36-.614 1.36-.54 0-1.119-.496-1.697-1.431l-.338-.545-.42.49c-.744.868-1.485 1.325-2.123 1.325-.739 0-1.26-.685-1.24-2.076.008-.84.154-1.762.303-2.49l.122-.607-.597-.188c-.48-.152-.947-.37-1.395-.654l-.476-.302-.344.449c-.665.866-1.279 1.291-1.793 1.291-.57 0-1.032-.638-1.057-2.017-.022-.93.138-1.82.354-2.604l.08-.29-.151-.265c-.63-1.102-.93-2.707-.72-4.571.39-3.677 3.87-6.6 7.837-6.869.391-.027.784-.041 1.176-.043z" fill="#f5a623" />
                 </svg>
               </div>
               <h4 className="font-bold text-slate-800 text-lg group-hover:text-[#3b82f6] transition-colors">Linux</h4>
@@ -186,7 +186,7 @@ export default function AboutUs() {
             <div className="group bg-white border border-slate-100 rounded-2xl p-8 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(0,0,0,0.05)] hover:shadow-[0_8px_40px_rgba(59,130,246,0.2)] hover:-translate-y-2 transition-all duration-500 cursor-pointer">
               <div className="h-16 w-16 rounded-2xl bg-green-50 group-hover:bg-green-100 flex items-center justify-center mb-5 transition-colors duration-300 border border-green-100">
                 <svg viewBox="0 0 24 24" className="w-9 h-9" fill="#3DDC84">
-                  <path d="M17.523 15.341a.99.99 0 01-.992-.988.993.993 0 011.984 0 .99.99 0 01-.992.988m-11.046 0a.99.99 0 01-.992-.988.993.993 0 011.984 0 .99.99 0 01-.992.988m11.404-6.161l1.966-3.407a.41.41 0 00-.149-.559.41.41 0 00-.559.149l-1.99 3.451A11.67 11.67 0 0012 7.91a11.67 11.67 0 00-5.149 1.204L4.861 5.663a.41.41 0 00-.559-.149.41.41 0 00-.149.559l1.966 3.407C3.353 10.895 1.555 13.542 1.333 16.67h21.334c-.222-3.128-2.02-5.775-4.786-7.49z"/>
+                  <path d="M17.523 15.341a.99.99 0 01-.992-.988.993.993 0 011.984 0 .99.99 0 01-.992.988m-11.046 0a.99.99 0 01-.992-.988.993.993 0 011.984 0 .99.99 0 01-.992.988m11.404-6.161l1.966-3.407a.41.41 0 00-.149-.559.41.41 0 00-.559.149l-1.99 3.451A11.67 11.67 0 0012 7.91a11.67 11.67 0 00-5.149 1.204L4.861 5.663a.41.41 0 00-.559-.149.41.41 0 00-.149.559l1.966 3.407C3.353 10.895 1.555 13.542 1.333 16.67h21.334c-.222-3.128-2.02-5.775-4.786-7.49z" />
                 </svg>
               </div>
               <h4 className="font-bold text-slate-800 text-lg group-hover:text-[#3b82f6] transition-colors">Android</h4>
@@ -212,7 +212,7 @@ export default function AboutUs() {
               <div className="p-8 flex flex-col items-center text-center group hover:bg-blue-50 transition-colors duration-300">
                 <span className="font-black text-2xl text-[#4285F4] mb-1">Google</span>
                 <div className="flex items-center my-2">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
                 </div>
                 <div className="text-3xl font-black text-slate-800">4.8</div>
                 <div className="text-slate-400 text-xs mt-1">Reviews</div>
@@ -221,7 +221,7 @@ export default function AboutUs() {
               <div className="p-8 flex flex-col items-center text-center group hover:bg-blue-50 transition-colors duration-300">
                 <span className="font-black text-2xl text-[#1877F2] mb-1">Facebook</span>
                 <div className="flex items-center my-2">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
                 </div>
                 <div className="text-3xl font-black text-slate-800">4.7</div>
                 <div className="text-slate-400 text-xs mt-1">Reviews</div>
@@ -230,7 +230,7 @@ export default function AboutUs() {
               <div className="p-8 flex flex-col items-center text-center group hover:bg-blue-50 transition-colors duration-300">
                 <span className="font-black text-2xl text-[#e83b3b] mb-1">Justdial</span>
                 <div className="flex items-center my-2">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
                 </div>
                 <div className="text-3xl font-black text-slate-800">4.5</div>
                 <div className="text-slate-400 text-xs mt-1">Reviews</div>
@@ -239,7 +239,7 @@ export default function AboutUs() {
               <div className="p-8 flex flex-col items-center text-center group hover:bg-blue-50 transition-colors duration-300">
                 <span className="font-black text-2xl text-[#e05c1c] mb-1">Sulekha</span>
                 <div className="flex items-center my-2">
-                  {[1,2,3,4,5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
+                  {[1, 2, 3, 4, 5].map(i => <Star key={i} className="w-4 h-4 fill-amber-400 text-amber-400" />)}
                 </div>
                 <div className="text-3xl font-black text-slate-800">4.7</div>
                 <div className="text-slate-400 text-xs mt-1">Reviews</div>

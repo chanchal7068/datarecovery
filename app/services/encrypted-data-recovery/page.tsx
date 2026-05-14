@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function BulletList({ items, color = 'text-[#3da3ff]' }: { items: string[]; color?: string }) {
@@ -47,7 +47,7 @@ export default function EncryptedDataRecovery() {
 
       <PageHeader
         title="Encrypted Data Recovery"
-        backgroundImage="/images/headers_img/encrypted_data.jpg"
+        backgroundImage="/images/services/encrypted_data_recovery_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -119,7 +119,7 @@ export default function EncryptedDataRecovery() {
           <p className="text-slate-600 text-sm leading-relaxed mb-6">
             We follow the same handling procedures in all other media like in recovering from the hard disk that is encrypted. The processes followed are outlined in the below given high-level steps:
           </p>
-          
+
           <div className="grid sm:grid-cols-2 gap-4 mt-2">
             {[
               {

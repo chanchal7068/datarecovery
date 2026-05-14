@@ -8,10 +8,10 @@ import {
 } from 'lucide-react';
 
 const reviews = [
-  { platform: 'Google',   rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50',   border: 'border-blue-100' },
+  { platform: 'Google', rating: '4.8', color: 'text-[#4285F4]', bg: 'bg-blue-50', border: 'border-blue-100' },
   { platform: 'Facebook', rating: '4.7', color: 'text-[#1877F2]', bg: 'bg-indigo-50', border: 'border-indigo-100' },
-  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50',    border: 'border-sky-100' },
-  { platform: 'Sulekha',  rating: '4.7', color: 'text-red-600',   bg: 'bg-red-50',    border: 'border-red-100' },
+  { platform: 'Justdial', rating: '4.5', color: 'text-[#3da3ff]', bg: 'bg-sky-50', border: 'border-sky-100' },
+  { platform: 'Sulekha', rating: '4.7', color: 'text-red-600', bg: 'bg-red-50', border: 'border-red-100' },
 ];
 
 function SectionHeading({ icon: Icon, title, iconBg, iconColor }: {
@@ -34,7 +34,7 @@ export default function FilesDataRecovery() {
 
       <PageHeader
         title="Files Data Recovery Services"
-        backgroundImage="/images/headers_img/files_data_recovery.jpg"
+        backgroundImage="/images/services/file_recovery_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'SERVICES' },
@@ -110,9 +110,9 @@ export default function FilesDataRecovery() {
         {/* File Data Recovery Services For All Types */}
         <div>
           <SectionHeading icon={FileText} title="File Data Recovery Services For All Types" iconBg="bg-violet-50" iconColor="text-violet-600" />
-          
+
           <div className="grid md:grid-cols-3 gap-6 mt-6">
-            
+
             {/* Word Document Recovery */}
             <div className="bg-white border border-slate-200 rounded-xl p-6 hover:shadow-md hover:border-violet-300 transition-all flex flex-col">
               <div className="h-12 w-12 rounded-full bg-violet-50 flex items-center justify-center mb-4 shrink-0">

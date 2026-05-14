@@ -148,7 +148,7 @@ export default function PriceAndCostPage() {
 
       <PageHeader
         title="Price and Cost"
-        backgroundImage="/images/headers_img/desktop_laptop.jpg"
+        backgroundImage="/images/price_cost_banner.jpg"
         breadcrumb={[
           { label: 'HOME', href: '/' },
           { label: 'PRICE AND COST' },
